@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Header from "./Header/Header";
+import Temp from "./Cards/temp";
+import SpO2 from "./Cards/spo2";
+import Pulse from "./Cards/pulse";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className="Cards" style={{display:"flex", flexDirection:"row", justifyContent:"space-around"}}>
+      <Temp/>
+      <SpO2/>
+      <Pulse/>
+      </div>
+      
     </div>
+     
   );
 }
 
